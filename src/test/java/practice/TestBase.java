@@ -6,20 +6,34 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
 public class TestBase {
-    
+    //aa
 	protected WebDriver driver;
-	protected static String url = "https://www.amazon.in";
+	protected String url = "https://www.amazon.in";
+	
+	private String BrowserName() {
+		
+		String DefaultBrowser="Edge";
+		String CmdInputBrowser= System.getProperty("browser");
+		if(CmdInputBrowser==null) {
+		return DefaultBrowser;
+		}
+		else {
+	    return CmdInputBrowser;	
+	    }
+		
+	}
 	
 	@Before
 	public void setup() {
-	   
+	    
+		String browser=BrowserName();
 		try {
-		driver= WebDriverFactory.GetBrowserDriver("firefox");
+		driver= WebDriverFactory.GetBrowserDriver("browser");
 		}
 		
 		catch(Exception e) {
         e.printStackTrace();
-		Assert.fail("incorrect browser sent");
+		Assert.fail("incorrect browser sent" + browser);
 		}
 	
 	}
