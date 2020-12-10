@@ -1,7 +1,8 @@
 package assignment;
 
-import java.util.concurrent.TimeUnit;
 
+
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.rules.Timeout;
@@ -12,9 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import junit.framework.Assert;
 
-public class testcase2 extends testbase {
+
+public class Esd extends testbase {
 
 	
 	
